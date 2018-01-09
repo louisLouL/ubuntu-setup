@@ -13,7 +13,11 @@ add-apt-repository \
    stable"
 apt-get update
 apt-get install -y docker-ce
-usermod -aG docker $USER
+usermod -aG docker $(logname)
 
 # config vim
 wget -O ~/.vimrc https://github.com/louisLouL/ubuntu-setup/raw/master/vimrc
+
+# clean up
+cd ..
+rm -rf ubuntu-setup
