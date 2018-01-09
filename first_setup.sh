@@ -16,7 +16,7 @@ apt-get install -y docker-ce
 usermod -aG docker $(logname)
 
 # config vim
-wget -O ~/.vimrc https://github.com/louisLouL/ubuntu-setup/raw/master/vimrc
+wget -O ~/.vimrc https://github.com/amix/vimrc/raw/master/vimrcs/basic.vim
 
 # clean up
 cd ..
