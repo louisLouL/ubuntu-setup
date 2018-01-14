@@ -6,7 +6,7 @@ curl apt-utils apt-transport-https debconf-utils gcc build-essential g++-5 \
 wget default-jdk software-properties-common ca-certificates
 
 # install docker
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
 add-apt-repository \
    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
    $(lsb_release -cs) \
