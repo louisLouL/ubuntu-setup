@@ -13,7 +13,7 @@ add-apt-repository \
    stable"
 apt-get update
 apt-get install -y docker-ce
-usermod -aG docker $(logname)
+usermod -aG docker $(whoami)
 
 # config vim
 wget -O ~/.vimrc https://github.com/amix/vimrc/raw/master/vimrcs/basic.vim
