@@ -8,9 +8,11 @@ RUN wget -O ~/.vimrc https://github.com/amix/vimrc/raw/master/vimrcs/basic.vim
 
 RUN bash -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
-RUN git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+RUN git clone https://github.com/zsh-users/zsh-autosuggestions /root/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 
-RUN wget 
+RUN wget -O ~/.zshrc https://raw.githubusercontent.com/louisLouL/ubuntu-setup/master/zshrc
+
+RUN /bin/zsh /root/.zshrc
 
 CMD ["/bin/zsh"]
 
