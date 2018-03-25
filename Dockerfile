@@ -2,7 +2,7 @@ FROM ubuntu
 
 RUN apt-get update
 
-RUN apt-get install -y curl vim wget zsh git 
+RUN apt-get install -y curl vim wget zsh git tzdata 
 
 RUN wget -O ~/.vimrc https://github.com/amix/vimrc/raw/master/vimrcs/basic.vim
 
@@ -15,6 +15,10 @@ RUN git clone https://github.com/zsh-users/zsh-autosuggestions /root/.oh-my-zsh/
 RUN wget -O ~/.zshrc https://raw.githubusercontent.com/louisLouL/ubuntu-setup/master/zshrc
 
 RUN /bin/zsh /root/.zshrc
+
+ENV TZ=America/New_York
+
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 CMD ["/bin/zsh"]
 
