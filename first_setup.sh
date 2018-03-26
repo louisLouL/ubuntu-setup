@@ -19,8 +19,8 @@ usermod -aG docker $SUDO_USER
 # config vim
 sudo -u $SUDO_USER bash << EOF
 wget -O ~/.vimrc https://github.com/amix/vimrc/raw/master/vimrcs/basic.vim
-sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+sh -c install.sh
 git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
 EOF
-
+chsh -s $(grep /zsh$ /etc/shells | tail -1)
 
