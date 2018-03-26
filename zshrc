@@ -61,6 +61,8 @@ ZSH_THEME="amuse"
 plugins=(
   git
   zsh-autosuggestions
+  docker
+  vi-mode
 )
 
 source $ZSH/oh-my-zsh.sh
