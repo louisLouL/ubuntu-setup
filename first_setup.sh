@@ -16,8 +16,6 @@ apt-get update
 apt-get install -y docker-ce
 usermod -aG docker $(whoami)
 
-su $whoami
-
 # install oh-my-zsh
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
