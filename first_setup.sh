@@ -3,7 +3,7 @@
 apt-get update
 apt-get install -y openssh-server libssl-dev libldap2-dev libffi-dev libpq-dev \
 curl apt-utils apt-transport-https debconf-utils gcc build-essential g++-5 \
-wget default-jdk software-properties-common ca-certificates zsh
+wget default-jdk software-properties-common ca-certificates zsh vim
 
 
 # install docker
@@ -19,7 +19,6 @@ usermod -aG docker $SUDO_USER
 # config vim
 sudo -u $SUDO_USER bash << EOF
 wget -O ~/.vimrc https://github.com/amix/vimrc/raw/master/vimrcs/basic.vim
-sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 EOF
 
 
