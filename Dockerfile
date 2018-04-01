@@ -14,7 +14,7 @@ RUN git clone https://github.com/zsh-users/zsh-autosuggestions /root/.oh-my-zsh/
 
 RUN wget -O ~/.zshrc https://raw.githubusercontent.com/louisLouL/ubuntu-setup/master/zshrc
 
-RUN source /root/.zshrc
+RUN /bin/zsh /root/.zshrc
 
 ENV TZ=America/New_York
 
