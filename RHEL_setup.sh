@@ -10,7 +10,7 @@ wget ftp://ftp.icm.edu.pl/vol/rzm6/linux-oracle-repo/OracleLinux/OL7/developer_E
 
 rpm -i pigz-2.3.4-1.el7.x86_64.rpm
 
-rm pigz-2.3.4-1.el7.x86_64.rpm
+rm -f pigz-2.3.4-1.el7.x86_64.rpm
 
 yum install -y docker-ce
 
